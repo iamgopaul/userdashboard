@@ -2,10 +2,11 @@
   "name": "user-dashboard",
   "version": "1.0.0",
   "private": true,
+  "workspaces": ["backend", "frontend"],
   "scripts": {
     "dev": "bun run dev.ts",
-    "dev:server": "cd server && bun run dev",
-    "dev:client": "cd client && bun run dev"
+    "dev:backend": "bun run --cwd backend dev",
+    "dev:frontend": "bun run --cwd frontend dev"
   },
   "devDependencies": {
     "@types/bun": "latest"
