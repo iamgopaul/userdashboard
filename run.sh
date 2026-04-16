@@ -12,7 +12,7 @@ fi
 
 # Push any schema changes
 echo "[run] Syncing database schema..."
-cd "$ROOT/backend" && bun run db:push
+cd "$ROOT/server" && bun run db:push
 
 # Start the app
 echo "[run] Starting app..."

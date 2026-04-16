@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "bun run scripts/dev.ts",
-    "dev:backend": "cd backend && bun run dev",
-    "dev:frontend": "cd frontend && bun run dev"
+    "dev": "bun run dev.ts",
+    "dev:server": "cd server && bun run dev",
+    "dev:client": "cd client && bun run dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
   }
 }

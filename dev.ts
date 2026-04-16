@@ -56,13 +56,13 @@ const frontendPort = await getFreePort(5173);
 console.log(`[dev] backend:  http://localhost:${backendPort}`);
 console.log(`[dev] frontend: http://localhost:${frontendPort}`);
 
-run("backend", "bun", ["run", "dev"], {
-  cwd: `${root}/backend`,
+run("server", "bun", ["run", "dev"], {
+  cwd: `${root}/server`,
   env: { PORT: String(backendPort) },
 });
 
-run("frontend", "bun", ["run", "dev", "--", "--port", String(frontendPort)], {
-  cwd: `${root}/frontend`,
+run("client", "bun", ["run", "dev", "--", "--port", String(frontendPort)], {
+  cwd: `${root}/client`,
   env: {
     VITE_API_URL: "/api",
     BACKEND_URL: `http://localhost:${backendPort}`,

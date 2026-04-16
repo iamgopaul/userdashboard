@@ -3,5 +3,5 @@ node_modules/
 *.local
 dist/
 build/
-backend/public/uploads/
-backend/drizzle/migrations/*.sql
+server/public/uploads/*
+!server/public/uploads/.gitkeep
